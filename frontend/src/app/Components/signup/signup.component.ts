@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {AuthService} from "../../Services/auth.service";
+import {TokenService} from "../../Services/token.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-signup',
@@ -17,17 +20,25 @@ export class SignupComponent implements OnInit {
 
   public error = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private authService:AuthService,
+    private tokenService: TokenService,
+    private router: Router) { }
 
   onSubmit(){
-    return this.http.post('http://127.0.0.1:8000/api/signup', this.form).subscribe(
-      data => console.log(data),
+    this.authService.signup(this.form).subscribe(
+      data => this.handleResponse(data),
       error => this.handleError(error)
     )
   }
 
+  handleResponse(data: any) {
+    this.tokenService.handle(data.access_token)
+    this.router.navigateByUrl('/profile')
+  }
+
   handleError(error:any){
-    this.error = error.error.errors;
+    this.error = error.error.error;
   }
 
 
