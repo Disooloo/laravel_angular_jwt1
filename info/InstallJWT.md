@@ -8,14 +8,14 @@
 2. Заходим в любую папку, где у нас будет проект.
 3. Создаем backend проект `laravel new backend`
 ![img.png](img.png)
-Успешная инцелицация проекта выглядит так!
+Успешная инициализация проекта выглядит так!
  ![img_1.png](img_1.png)
 4. `cd backend` и устанавливаем jwt `composer require tymon/jwt-auth`
 5. Далее публикуем jwt `php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"`
 6. Генерируем секретный ключ JWT `php artisan jwt:secret`
 ![img_2.png](img_2.png)
 7. Теперь открываем phpStorm и заходим в User модель
- > Путь до модели: app->models->user.php
+ > Путь до модели: app/models/user.php
  > ![img_3.png](img_3.png)
 8. Заменить код в модели на этот
 ```
@@ -98,8 +98,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 ```
 ![img_6.png](img_6.png)
 
-11. Создайте AuthController
-Затем создайте AuthController вручную или выполнив команду artisan:
+11. Затем создайте AuthController вручную или выполнив команду artisan:
 `php artisan make:controller AuthController`
 12. Пишем в AuthController. app/Http/Controllers/AuthController.php
 ```
