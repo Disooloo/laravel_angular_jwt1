@@ -237,6 +237,7 @@ DB_PASSWORD=пароль
 ```
 php artian migrate
 ```
+15.1 Запускаем backend `php artisan serve`
 16. Создаем первого пользователя в бд самостоятельно и проверяем
 ![img_9.png](img_9.png)
 17. Успешно.
