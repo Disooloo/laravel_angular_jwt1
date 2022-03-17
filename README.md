@@ -16,21 +16,39 @@
 
 `cd backend` `composer install` 
 
-связка с бд `.env`
+`npm install` или `yarn` (Смотри папку **node_modules**)
 
+Изменить `.env.example` на `.env`
+
+Генерация APP_KEY
+`php artisan key:generate`
+
+
+## Подключение к DataBase `.env`
 ```
 DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
+DB_HOST=localhost
 DB_PORT=3306
-DB_DATABASE=имя бд
-DB_USERNAME=имя пользователя 
-DB_PASSWORD=пароль
+DB_DATABASE=Имя бд
+DB_USERNAME=Имя пользователя 
+DB_PASSWORD=Пароль пользователя
 ```
-После подключение введи `php artisan migrate`
 
-> Теперь нужно запустить Backend и frontend <br>
->
-> Angular -> frontend `ng s -o` <br>
-> Laravel -> backend `php arisan serve`
+## Выполнение Миграций
+```
+php artisan migrate
+```
+
+## Генерация JWT ключа
+```
+php artisan jwt:secret
+```
+
+![img_3.png](img_3.png)
+
+## Запуск
+Laravel -> backend `php arisan serve` <br>
+Angular -> frontend `ng s -o` <br>
+
 
 
