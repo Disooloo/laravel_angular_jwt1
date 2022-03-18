@@ -46,8 +46,6 @@ php artisan migrate
 php artisan jwt:secret
 ```
 
-![img_3.png](info/img_3.png)
-
 ## Запуск
 Laravel -> backend `php arisan serve` <br>
 Angular -> frontend `ng s -o` <br>
