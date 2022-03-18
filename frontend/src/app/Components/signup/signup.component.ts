@@ -34,7 +34,7 @@ export class SignupComponent implements OnInit {
 
   handleResponse(data: any) {
     this.tokenService.handle(data.access_token)
-    this.router.navigateByUrl('/profile')
+    this.router.navigateByUrl('/')
   }
 
   handleError(error:any){

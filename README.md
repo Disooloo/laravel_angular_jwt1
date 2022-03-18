@@ -2,9 +2,11 @@
 
 > <a href="https://youtu.be/TK9dFTmKJRE">Видео обзор</a> <br/>
 
-![img.png](img.png)
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
+![img_5.png](info/img_5.png)
+![img_1.png](info/img_1.png)
+![img_6.png](info/img_6.png)
+![img_7.png](info/img_7.png)
+![img_8.png](info/img_8.png)
 
 # Установка
 
@@ -44,7 +46,7 @@ php artisan migrate
 php artisan jwt:secret
 ```
 
-![img_3.png](img_3.png)
+![img_3.png](info/img_3.png)
 
 ## Запуск
 Laravel -> backend `php arisan serve` <br>

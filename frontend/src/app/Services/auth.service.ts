@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class AuthService {
+  // private baseUrl = 'http://stazhirovka-2021-8528.solo-it.ru/api'
   private baseUrl = 'http://127.0.0.1:8000/api'
 
   constructor(private http: HttpClient) { }

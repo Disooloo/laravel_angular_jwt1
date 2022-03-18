@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\CategoriesController;
+use App\Http\Controllers\Api\LeadController;
+use App\Http\Controllers\Api\StatusController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +19,10 @@ Route::group([
 
 
 });
+
+Route::resource('/leads', LeadController::class);
+Route::resource('/statuses', StatusController::class);
+Route::resource('/categories', CategoriesController::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+
+<div class="row ">
+  <div class="col-sm-4 p-bottom" *ngFor="let lead of leads">
+    <h4 class="card-header text-center"><a class="text-secondary" [href]="lead.link">{{lead.link}}</a></h4>
+    <div class="card m-2">
+      <div class="card-body">
+        <div class="row row-cols-2">
+          <span class="p-3">{{lead.category!.title }}</span>
+          <span class="p-3 text-right">{{lead.status!.title }}</span>
+        </div>
+        <p class="card-text">{{lead.comment | slice:0:200}}</p>
+        <div class="text-right">
+          <a class="btn btn-primary" [routerLink]="['form',lead.id]">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
